@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+#include <vector>
+#include <cstdlib>
+using namespace std;
+
+int main(){
+
+vector<int> victor = {0,1,2,3,4,5,6,7,8,9,10};
+//int array [10] = {1,2,3,4,5,6,7,8,9,10};
+int l = 0;
+int r =victor.size();
+int center= (victor.size())/2;
+cout << center<< endl;
+int num ;
+//cout << victor.size();
+cout << "pick a number?"<<endl;
+cin >>num;
+
+while (num != center) {
+if (center == num){
+    cout<< num << " is in the vector"<<endl;
+    cout << center << endl;
+    
+}
+else if (center > num) {
+    r = center;
+    center = (l+r)/2;
+    cout << center << endl;
+}
+else {
+    l= center;
+    center = (l+r)/2;
+    cout << center << endl;
+}
+}
+cout<< num << " is in the vector"<<endl;
+
+
+
+
+}
